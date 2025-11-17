@@ -16,17 +16,17 @@ if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_A
 }
 
 // ルート設定
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// });
 
-app.get('/main.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'main.html'));
-});
+// app.get('/main.html', (req, res) => {
+//     res.sendFile(path.join(__dirname, 'public', 'main.html'));
+// });
 
-app.get('/history.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'history.html'));
-});
+// app.get('/history.html', (req, res) => {
+//     res.sendFile(path.join(__dirname, 'public', 'history.html'));
+// });
 
 // ヘルスチェックエンドポイント
 app.get('/api/health', (req, res) => {
@@ -60,10 +60,10 @@ app.use((err, req, res, next) => {
 });
 
 // サーバー起動
-app.listen(PORT, () => {
-    console.log(`サーバーがポート ${PORT} で起動しました`);
-    console.log(`環境: ${process.env.NODE_ENV || 'development'}`);
-    console.log(`URL: http://localhost:${PORT}`);
-});
+// app.listen(PORT, () => {
+//     console.log(`サーバーがポート ${PORT} で起動しました`);
+//     console.log(`環境: ${process.env.NODE_ENV || 'development'}`);
+//     console.log(`URL: http://localhost:${PORT}`);
+// });
 
 module.exports = app;
