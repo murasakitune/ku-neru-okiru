@@ -1,0 +1,27 @@
+{
+  "name": "ku-neru-okiru",
+  "version": "1.0.0",
+  "description": "食う・寝る・起きるを記録するアプリ",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "echo 'No build step required'"
+  },
+  "keywords": [
+    "tracker",
+    "lifestyle",
+    "supabase"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.81.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

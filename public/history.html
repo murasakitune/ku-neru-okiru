@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食う・寝る・起きる - 履歴</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>履歴</h1>
+            <div class="user-info">
+                <a href="main.html" class="btn btn-secondary">メインに戻る</a>
+                <button id="logoutBtn" class="btn btn-secondary">ログアウト</button>
+            </div>
+        </header>
+
+        <main class="history-container">
+            <div class="activity-section" data-type="1">
+                <h2>🍽️ 食う</h2>
+                <div class="table-container">
+                    <table class="activity-table">
+                        <thead>
+                            <tr>
+                                <th>日時</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="activity-1">
+                            <!-- データが動的に挿入されます -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="add-form">
+                    <h3>新規登録</h3>
+                    <form class="add-activity-form" data-type="1">
+                        <input type="datetime-local" class="datetime-input" required>
+                        <button type="submit" class="btn btn-primary">登録</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="activity-section" data-type="2">
+                <h2>😴 寝る</h2>
+                <div class="table-container">
+                    <table class="activity-table">
+                        <thead>
+                            <tr>
+                                <th>日時</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="activity-2">
+                            <!-- データが動的に挿入されます -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="add-form">
+                    <h3>新規登録</h3>
+                    <form class="add-activity-form" data-type="2">
+                        <input type="datetime-local" class="datetime-input" required>
+                        <button type="submit" class="btn btn-primary">登録</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="activity-section" data-type="3">
+                <h2>⏰ 起きる</h2>
+                <div class="table-container">
+                    <table class="activity-table">
+                        <thead>
+                            <tr>
+                                <th>日時</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="activity-3">
+                            <!-- データが動的に挿入されます -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="add-form">
+                    <h3>新規登録</h3>
+                    <form class="add-activity-form" data-type="3">
+                        <input type="datetime-local" class="datetime-input" required>
+                        <button type="submit" class="btn btn-primary">登録</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <!-- 編集モーダル -->
+    <div id="editModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h3>時刻を編集</h3>
+            <form id="editForm">
+                <input type="hidden" id="editActivityId">
+                <input type="datetime-local" id="editDateTime" required>
+                <div class="modal-actions">
+                    <button type="button" id="cancelEdit" class="btn btn-secondary">キャンセル</button>
+                    <button type="submit" class="btn btn-primary">更新</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="history.js"></script>
+</body>
+</html>

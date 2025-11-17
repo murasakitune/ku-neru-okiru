@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食う・寝る・起きる - メイン</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>食う・寝る・起きる</h1>
+            <div class="user-info">
+                <span id="userEmail"></span>
+                <button id="logoutBtn" class="btn btn-secondary">ログアウト</button>
+            </div>
+        </header>
+
+        <main class="main-container">
+            <div class="button-grid">
+                <button class="activity-btn btn-large" data-type="1">
+                    <span class="btn-icon">🍽️</span>
+                    <span class="btn-text">食う</span>
+                </button>
+                <button class="activity-btn btn-large" data-type="2">
+                    <span class="btn-icon">😴</span>
+                    <span class="btn-text">寝る</span>
+                </button>
+                <button class="activity-btn btn-large" data-type="3">
+                    <span class="btn-icon">⏰</span>
+                    <span class="btn-text">起きる</span>
+                </button>
+            </div>
+
+            <div class="history-link">
+                <a href="history.html" class="btn btn-outline">履歴を見る</a>
+            </div>
+        </main>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食う・寝る・起きる - ログイン</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>食う・寝る・起きる</h1>
+            <p>生活リズムを記録しよう</p>
+        </header>
+
+        <main class="auth-container">
+            <div class="auth-form">
+                <h2>ログイン</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">メールアドレス</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">パスワード</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">ログイン</button>
+                </form>
+
+                <div class="auth-switch">
+                    <p>アカウントをお持ちでない方は <a href="#" id="showRegister">新規登録</a></p>
+                </div>
+            </div>
+
+            <div class="auth-form" id="registerForm" style="display: none;">
+                <h2>新規登録</h2>
+                <form id="registerFormElement">
+                    <div class="form-group">
+                        <label for="registerEmail">メールアドレス</label>
+                        <input type="email" id="registerEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">パスワード</label>
+                        <input type="password" id="registerPassword" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">登録</button>
+                </form>
+
+                <div class="auth-switch">
+                    <p>既にアカウントをお持ちの方は <a href="#" id="showLogin">ログイン</a></p>
+                </div>
+            </div>
+        </main>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>
