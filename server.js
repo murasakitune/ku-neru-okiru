@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // 環境変数の確認
-if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+if (!process.env.SUPABASE_URL || !process.env.SUPABASE_ANON_KEY) {
     console.warn('警告: Supabaseの環境変数が設定されていません。');
     console.warn('本番環境では必ず設定してください。');
 }
@@ -40,8 +40,8 @@ app.get('/api/health', (req, res) => {
 // Supabase設定エンドポイント
 app.get('/api/config', (req, res) => {
     res.json({
-        supabaseUrl: process.env.NEXT_PUBLIC_SUPABASE_URL,
-        supabaseAnonKey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+        supabaseUrl: process.env.SUPABASE_URL,
+        supabaseAnonKey: process.env.SUPABASE_ANON_KEY
     });
 });
 
